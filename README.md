@@ -12,7 +12,11 @@ O foco desta etapa é mostrar, na prática, como os dados que vêm do campo (sen
 - Curso: Tecnólogo em Inteligência Artificial  
 - Instituição: FIAP  
 - Fase: 4 – Previsão Inteligente na Agricultura  
-- Grupo: FarmTech Solutions  
+- Grupo: 
+   Leticia Grossi Dornelas – RM568172
+   Leonardo Borges Alves da Mota – RM566939
+   Bernardo Naves Doti Avelar – RM566867
+   David Eduardo da Silva Correia - RM567525
 - Responsável por Banco + Integração + Documentação: **(seu nome aqui)**  
 
 ---
