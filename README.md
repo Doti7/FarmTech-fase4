@@ -47,7 +47,7 @@ A arquitetura integra:
 ---
 
 ## 3. Estrutura do Repositório
-/
+'''
 ├── backend_ml/
 │   ├── modelos/                  # modelos .pkl e arquivo de métricas
 │   ├── modelos_preditivos.py     # pipeline de modelos
@@ -70,7 +70,7 @@ A arquitetura integra:
 │   └── diagramas/                # diagramas e fluxos visuais
 │
 └── README.md
-
+'''
 ---
 
 ## 4. Banco de Dados (SQL)
