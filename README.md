@@ -104,3 +104,48 @@ FarmTech-fase4/
 │
 ├── README.md                     # este documento
 └── requirements.txt              # bibliotecas Python utilizadas no projeto
+
+## 🤖 Modelos preditivos e recomendações (PARTE 2)
+
+Na Parte 2 do projeto, foram implementados modelos preditivos para estimar a produtividade agrícola (kg/ha) e, a partir dessas previsões, gerar recomendações de manejo.
+
+Os arquivos principais dessa etapa são:
+
+- `backend_ml/modelos_preditivos.py`  
+  - Treina e compara três modelos de regressão:
+    - Regressão Linear
+    - Regressão Ridge
+    - Random Forest Regressor  
+  - Utiliza como variáveis de entrada:
+    - média da umidade do solo (`media_umidade_solo`)
+    - média do pH do solo (`media_ph_solo`)
+    - total de água aplicada (`total_agua`)
+    - total de fertilizante aplicado (`total_fertilizante`)  
+  - A saída é a **produtividade estimada** em kg/ha.  
+  - Para cada modelo são calculadas as métricas:
+    - MAE (erro médio absoluto)
+    - MSE (erro quadrático médio)
+    - RMSE
+    - R²  
+  - As métricas são registradas em `backend_ml/modelos/resultados_parte2.txt` e os modelos treinados são salvos em:
+    - `modelo_lr.pkl`
+    - `modelo_ridge.pkl`
+    - `modelo_rf.pkl`
+
+- `backend_ml/visualizacoes.py`  
+  - Gera gráficos para análise dos modelos:
+    - gráficos de dispersão entre cada variável agrícola e a produtividade,
+    - gráfico de resíduos (produtividade prevista x erro),
+    - gráfico comparando valores reais vs previstos.  
+  - As imagens são salvas em `assets/prints_dashboard/` e podem ser usadas tanto no relatório quanto na apresentação.
+
+- `backend_ml/recomendacoes.py`  
+  - Converte as previsões em recomendações de manejo, com regras simples baseadas em:
+    - nível de umidade (baixo, adequado, alto),
+    - faixa de pH (ácido, ideal, alto),
+    - quantidade de fertilizante aplicada,
+    - produtividade estimada (baixa, aceitável, alta).  
+  - A partir disso, o módulo sugere ações futuras de irrigação, correção de solo (pH) e fertilização, funcionando como um “assistente agrícola” que orienta o produtor com base nas previsões.
+
+Em conjunto, essa etapa demonstra como os modelos de regressão não servem apenas para prever números, mas também para apoiar recomendações práticas de irrigação, correção de solo e adubação, aproximando o projeto do conceito de Agricultura Cognitiva.
+
