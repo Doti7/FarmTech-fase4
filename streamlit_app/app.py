@@ -8,7 +8,6 @@ Descrição:
         - gráfico de correlação simples,
         - formulário para simular cenários agrícolas.
 
-    É a interface do "Assistente Agrícola Inteligente".
 """
 
 import streamlit as st
