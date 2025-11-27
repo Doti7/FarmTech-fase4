@@ -13,7 +13,7 @@ O foco desta etapa é mostrar, na prática, como os dados que vêm do campo (sen
 - Instituição: FIAP  
 - Fase: 4 – Previsão Inteligente na Agricultura  
 - Grupo: FarmTech Solutions  
-- Responsável por Banco + Integração + Documentação: Bernardo D. - RM566867 
+- Responsável por Banco + Integração + Documentação: **(seu nome aqui)**  
 
 ---
 
@@ -63,5 +63,40 @@ A solução foi organizada em camadas:
      - permite simular cenários e obter previsões.
 
 4. **Evidências e Materiais de Apoio (pasta `assets/`)**
-   - P
+   - Prints do banco de dados,
+   - prints do dashboard,
+   - diagramas de arquitetura, se necessários.
 
+---
+
+## 📂 Estrutura de Pastas
+
+```text
+FarmTech-fase4/
+│
+├── backend_ml/
+│   ├── preprocessamento.py       # limpeza, seleção de features, etc.
+│   ├── treino_modelos.py         # treinamento dos modelos de regressão
+│   ├── avaliacao_modelos.py      # cálculo de métricas (MAE, MSE, RMSE, R²)
+│   └── modelos/                  # modelos treinados (arquivos .pkl, por exemplo)
+│
+├── streamlit_app/
+│   └── app.py                    # aplicação Streamlit (dashboard do gestor)
+│
+├── db/
+│   ├── schema.sql                # definição das tabelas do banco de dados
+│   ├── seed_inicial.sql          # insert de dados iniciais (campo, safra, sensores, etc.)
+│   ├── ingestao_iot.py           # script para simular leituras de sensores IoT
+│   └── consultas_exemplo.sql     # consultas SQL usadas para análise e prints
+│
+├── data/
+│   ├── raw/                      # dados brutos (se houver CSVs de sensores, etc.)
+│   └── processed/                # bases tratadas usadas no treinamento de ML
+│
+├── assets/
+│   ├── prints_banco/             # evidências do banco: consultas, tabelas, etc.
+│   ├── prints_dashboard/         # evidências do dashboard: gráficos, métricas, etc.
+│   └── diagramas/                # diagramas de arquitetura/modelagem
+│
+├── README.md                     # este documento
+└── requirements.txt              # bibliotecas Python utilizadas no projeto
