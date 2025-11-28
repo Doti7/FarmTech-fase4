@@ -169,13 +169,12 @@ Essas recomendações são calculadas a partir de regras de domínio e correlaç
 
 ---
 
-## 9. Vídeos de Apresentação
+## 9. Vídeo de Apresentação
 
-A entrega contempla dois vídeos:
-- Parte 1: pipeline de ML e dashboard - link:
-- Parte 2: modelos preditivos, métricas e recomendações - link: 
-
-Ambos mostram o funcionamento completo da solução do início ao fim.
+A entrega do video contempla:
+- Parte 1: pipeline de ML e dashboard
+- Parte 2: modelos preditivos, métricas e recomendações
+- link: (https://youtu.be/3OPDGnlfr1w)
 
 ---
 
